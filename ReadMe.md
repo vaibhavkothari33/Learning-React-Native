@@ -214,7 +214,7 @@ const Images = () => {
 export default Images
 ```
 <!-- ![Screenshot of the app](./images/sc01.jpeg "First page") -->
-<img src="./images/sc01.jpeg" alt="Screenshot of the app" title="First page" width="200"/> &nbsp;<img src="./images/sc02.jpeg" alt="Screenshot of the app" title="First page" width="200"/>
+<img src="./images/sc01.jpeg" alt="Screenshot of the app" title="First page" width="250"/> &nbsp;<img src="./images/sc02.jpeg" alt="Screenshot of the app" title="First page" width="250"/>
 
 
 ![Screenshot of the app](./images/image.png "First page")
