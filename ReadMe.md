@@ -1,5 +1,9 @@
 # React native guide
 
+in case expo go is not working try this command
+```bash
+npm install -g expo-cl 
+```
 ## Making components
 
 ```tsx
