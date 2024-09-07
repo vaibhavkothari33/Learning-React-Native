@@ -34,10 +34,10 @@ const index = () => {
   return (
     <View>
       <Text>index</Text>
+      <Name/>
       <Job/>
       <Age/>
       <Twitter/>
-      <Name/>
     </View>
   )
 }
