@@ -1,75 +1,191 @@
-# React native guide
-make the new app by
+# React Native Guide
+
+### Creating a New App
+### To create a new React Native app using Expo, you can use the following command:
+
 ```bash
 npx create-expo-app@latest
 ```
 
-in case expo go is not working try this command
-```bash
-npm install -g expo-cl 
-```
-## Making components
+### If Expo Go isn't working, you can try reinstalling the CLI globally:
 
+```bash
+npm install -g expo-cl
+```
+
+
+# Making Components
+
+### In React Native, components are reusable pieces of UI.
+
+### Here's an example of how to create and use a simple component:
+
+### Create a component Greet.tsx:
+### Example 1
+```tsx
+// Greet.tsx
+import { Text } from "react-native";
+import React from "react";
+
+const Greet = () => {
+  return <Text>Hello, welcome to the app!</Text>;
+};
+
+export default Greet;
+```
+### Example 2
 ```tsx
 import { Text } from "react-native";
 import Greet from "../components/Greet.tsx";
 
 const Index = () => {
-    return <Greet/>;
+  return <Greet />;
 };
 export default Index;
 ```
+
 ## Using the components
+
+### Example 1
 ```tsx
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
 
-import Name from "../../components/Namec"
-import Twitter from "../../components/Twitter"
-import Job from '../../components/job'
-import Age from '../../components/greet'
-
+import Name from "../../components/Namec";
+import Twitter from "../../components/Twitter";
+import Job from "../../components/job";
+import Age from "../../components/greet";
 
 const index = () => {
   return (
     <View>
       <Text>index</Text>
-      <Name/>
-      <Job/>
-      <Age/>
-      <Twitter/>
+      <Name />
+      <Job />
+      <Age />
+      <Twitter />
     </View>
-  )
-}
+  );
+};
 
-export default index
+export default index;
 ```
-
-view === div in HTML
-## Buttons in React native
+### Example 2
 ```tsx
-import { View, Text, Button } from 'react-native'
-import React from 'react'
+// Index.tsx
+import React from "react";
+import Greet from "../components/Greet.tsx";
+
+const Index = () => {
+  return <Greet />;
+};
+
+export default Index;
+```
+### View acts like the div in HTML (used for layout).
+### Text is used to display text elements.
+
+# Buttons in React native
+
+### Buttons are a fundamental UI element in any app. Here's how to use them in React Native:
+
+```tsx
+import { View, Text, Button } from "react-native";
+import React from "react";
 
 const Button1 = () => {
   return (
     <View>
       <Text>button</Text>
-          {/* Events */}
-      <Button  title="Start now" color="red"/>
-  
-      <Button title='Click me' color = "blue" onPress={()=>
-        console.log("Button 2 Pressed")
-        
-      }></Button>
-    </View>
-  )
-}
+      {/* Events */}
+      <Button title="Start now" color="red" />
 
-export default Button1
+      <Button
+        title="Click me"
+        color="blue"
+        onPress={() => console.log("Button 2 Pressed")}
+      ></Button>
+    </View>
+  );
+};
+
+export default Button1;
 ```
+# Pressables in React Native
+
+### Pressable is a more flexible component than Button.
+
+It lets you handle more gestures like onPress, onPressIn, onLongPress, etc.
+
+It's highly customizable for building complex interactions.
 
 ### 1. onPress: function that is called when the button is Pressed
+
 ### 2. onPressIn: function is called when the press gesture starts
+
 ### 3. onPressOut: function is called when the press gesture ends or cancelled
+
 ### 4. onLongPress: function is called when a long press is detected
+
+### Example 1
+```tsx
+import { View, Text, Pressable } from 'react-native';
+import React from 'react';
+
+const PressableButton = () => {
+  return (
+    <View>
+      <Pressable onPress={() => console.log("OnPressed")} style={{ marginBottom: 20 }}>
+        <Text>          OnPress</Text>
+      </Pressable>
+      
+      <Pressable onPressIn={() => console.log("OnPressIn")} style={{ marginBottom: 20 }}>
+        <Text style={{ color: "brown" }}>           OnPressIn</Text>
+      </Pressable>
+
+      <Pressable onPressOut={() => console.log("OnPressOut")} style={{ marginBottom: 20 }}>
+        <Text style={{ color: "blue" }}>            OnPressedOut</Text>
+      </Pressable>
+
+      <Pressable onLongPress={() => console.log("OnLongPress")}>
+        <Text style={{ color: "blue" }}>            OnLongPress</Text>
+      </Pressable>
+    </View>
+  );
+};
+
+export default PressableButton;
+```
+### Example 2
+```tsx
+import { View, Text, Pressable } from 'react-native';
+import React from 'react';
+
+const PressableButton = () => {
+  return (
+    <View>
+      {/* onPress Event */}
+      <Pressable onPress={() => console.log("OnPressed")} style={{ marginBottom: 20 }}>
+        <Text>OnPress</Text>
+      </Pressable>
+      
+      {/* onPressIn Event */}
+      <Pressable onPressIn={() => console.log("OnPressIn")} style={{ marginBottom: 20 }}>
+        <Text style={{ color: "brown" }}>OnPressIn</Text>
+      </Pressable>
+
+      {/* onPressOut Event */}
+      <Pressable onPressOut={() => console.log("OnPressOut")} style={{ marginBottom: 20 }}>
+        <Text style={{ color: "blue" }}>OnPressOut</Text>
+      </Pressable>
+
+      {/* onLongPress Event */}
+      <Pressable onLongPress={() => console.log("OnLongPress")}>
+        <Text style={{ color: "blue" }}>OnLongPress</Text>
+      </Pressable>
+    </View>
+  );
+};
+
+export default PressableButton;
+```

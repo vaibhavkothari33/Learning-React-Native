@@ -10,9 +10,8 @@ const Button1 = () => {
         console.log("Button Pressed")
         
       }/>
-      <Button  title="Start now" color="red"/>
-  
-      <Button title='Click me' color = "blue" onPress={()=>
+      <Text style={{ marginBottom: 20 }}></Text>
+    <Button title='Click me' color = "blue" onPress={()=>
         console.log("Button 2 Pressed")
         
       }></Button>

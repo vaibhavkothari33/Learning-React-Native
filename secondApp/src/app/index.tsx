@@ -5,6 +5,7 @@ import Twitter from "../components/Twitter"
 import Age from '../components/greet'
 import Jobc from '../components/Job'
 import Button1 from '../components/button'
+import PressableButton from '../components/Pressable'
 
 
 const index = () => {
@@ -16,6 +17,7 @@ const index = () => {
       <Twitter/>
       <Jobc/>
       <Button1/>
+      <PressableButton/>
     </View>
     
   )
