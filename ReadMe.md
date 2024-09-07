@@ -189,7 +189,7 @@ const PressableButton = () => {
 
 export default PressableButton;
 ```
-#
+# Images in React Native
 ### React Native provides the Image component to display images in your app. 
 
 You can load images from various sources like local files, network URLs ( uri ), or static resources.
