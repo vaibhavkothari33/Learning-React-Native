@@ -44,3 +44,32 @@ const index = () => {
 
 export default index
 ```
+
+view === div in HTML
+## Buttons in React native
+```tsx
+import { View, Text, Button } from 'react-native'
+import React from 'react'
+
+const Button1 = () => {
+  return (
+    <View>
+      <Text>button</Text>
+          {/* Events */}
+      <Button  title="Start now" color="red"/>
+  
+      <Button title='Click me' color = "blue" onPress={()=>
+        console.log("Button 2 Pressed")
+        
+      }></Button>
+    </View>
+  )
+}
+
+export default Button1
+```
+
+### 1. onPress: function that is called when the button is Pressed
+### 2. onPressIn: function is called when the press gesture starts
+### 3. onPressOut: function is called when the press gesture ends or cancelled
+### 4. onLongPress: function is called when a long press is detected
