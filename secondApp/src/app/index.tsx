@@ -7,20 +7,22 @@ import Jobc from '../components/Job'
 import Button1 from '../components/button'
 import PressableButton from '../components/Pressable'
 import Images from '../components/Images'
+import Card from '../components/card'
 
 
 const index = () => {
   return (
     <View>
-      {/* <Text>             index</Text> */}
+      {/* <Text>index</Text> */}
       {/* <Images/> */}
-      <Name/>
       {/* <Age/> */}
-      <Twitter/>
+      {/* <Twitter/> */}
       {/* <Jobc/> */}
-      <Button1/>
+      {/* <Button1/>
       <PressableButton/>
-      <Images/>
+      <Images/> */}
+      <Card/>
+      <Name/>
     </View>
     
   )
