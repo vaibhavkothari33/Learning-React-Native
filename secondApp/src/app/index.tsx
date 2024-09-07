@@ -6,6 +6,7 @@ import Age from '../components/greet'
 import Jobc from '../components/Job'
 import Button1 from '../components/button'
 import PressableButton from '../components/Pressable'
+import Images from '../components/Images'
 
 
 const index = () => {
@@ -18,6 +19,7 @@ const index = () => {
       <Jobc/>
       <Button1/>
       <PressableButton/>
+      <Images/>
     </View>
     
   )
