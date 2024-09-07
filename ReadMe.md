@@ -1,4 +1,8 @@
 # React native guide
+make the new app by
+```bash
+npx create-expo-app@latest
+```
 
 in case expo go is not working try this command
 ```bash
@@ -15,4 +19,3 @@ const Index = () => {
 };
 export default Index;
 ```
-why the fuck you are not workihn
