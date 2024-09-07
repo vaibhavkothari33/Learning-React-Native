@@ -12,11 +12,12 @@ import Images from '../components/Images'
 const index = () => {
   return (
     <View>
-      <Text>             index</Text>
+      {/* <Text>             index</Text> */}
+      {/* <Images/> */}
       <Name/>
-      <Age/>
+      {/* <Age/> */}
       <Twitter/>
-      <Jobc/>
+      {/* <Jobc/> */}
       <Button1/>
       <PressableButton/>
       <Images/>

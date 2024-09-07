@@ -207,6 +207,5 @@ const Images = () => {
   )
 }
 export default Images
-
-
 ```
+![Screenshot of the app](./images/image.png "First page")

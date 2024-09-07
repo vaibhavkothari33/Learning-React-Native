@@ -4,7 +4,6 @@ import React from 'react'
 const Button1 = () => {
   return (
     <View>
-      <Text>button</Text>
           {/* Events */}
       <Button title="Learn more" color="green" onPress={()=>
         console.log("Button Pressed")
