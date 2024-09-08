@@ -216,5 +216,110 @@ export default Images
 <!-- ![Screenshot of the app](./images/sc01.jpeg "First page") -->
 <img src="./images/sc01.jpeg" alt="Screenshot of the app" title="First page" width="250"/> &nbsp;<img src="./images/sc02.jpeg" alt="Screenshot of the app" title="First page" width="250"/>
 
+# Dynamic Content Rendering
+The typescript way 
+```tsx
+import { View, Text } from "react-native";
+import React from "react";
 
-![Screenshot of the app](./images/image.png "First page")
+const Dynamic = () => {
+  const username = "Vaibhav Kothari";
+  const age = "19";
+  const multi = (a: number, b: number) => a * b;
+  return (
+    <View>
+      <Text style={{textAlign:"center"}}>My name is {username}</Text>
+      <Text style={{textAlign:"center"}}>My age is {age}</Text>
+      <Text style={{textAlign:"center"}}> 3 * 6 = {multi(3,6)}</Text>
+      <Text style={{textAlign:"center"}}> 3 + 6 = {3+6}</Text>
+    </View>
+  );
+};
+export default Dynamic;
+```
+<img src="./images/sc03.jpeg" alt="Screenshot of the app" title="First page" width="250"/>
+
+# Styling your app through css
+### 1. Inline css
+```tsx
+import { View, Text } from "react-native";
+import React from "react";
+
+const Dynamic = () => {
+  return (
+    <View>
+      <Text style={{textAlign:"center",width:100,height:200,color:"red",backgroundColor:"blue"}}>My name is Vaibhav Kothari</Text>
+    </View>
+  );
+};
+export default Dynamic;
+```
+
+### 2. Internal css
+
+```tsx
+import { View, Text, StyleSheet } from 'react-native';
+
+const InternalStyleExample = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Internal Styled Text</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    backgroundColor: '#f8f8f8',
+  },
+  text: {
+    color: 'blue',
+    fontSize: 20,
+  },
+});
+
+export default InternalStyleExample;
+
+```
+### 3. External css
+style.ts 
+```ts
+import {StyleSheet} from 'react-native';
+const st = StyleSheet.create({
+    textStyle:{
+        color:"white",
+        fontSize:30,
+        backgroundColor:"red",
+        margin:20,
+        padding:20
+    },
+    lineStyle:{
+        color:"white",
+        fontSize:30,
+        backgroundColor:"red",
+        margin:20,
+        padding:20
+    }
+})
+export default st;
+```
+External.tsx to use that css code
+```tsx
+import { View, Text, StyleSheet } from 'react-native'
+import st from '../utils/styles'
+
+const External = () => {
+  return (
+    <View>
+      <Text style={st.textStyle}>External</Text>
+      <Text style={st.lineStyle}>CSS</Text>
+    </View>
+  )
+}
+
+export default External
+```
+<img src="./images/comparsion.png" alt="Screenshot of the app" title="First page" width="600"/>
+
+![Screenshot of the app](./images/profile.png "First page")

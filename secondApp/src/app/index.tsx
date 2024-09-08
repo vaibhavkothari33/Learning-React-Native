@@ -8,7 +8,9 @@ import Button1 from '../components/button'
 import PressableButton from '../components/Pressable'
 import Images from '../components/Images'
 import Card from '../components/card'
-
+import Dynamic from '../components/Dynamic'
+import CarComponent from '../components/CarComponent'
+import External from '../components/External'
 
 const index = () => {
   return (
@@ -23,6 +25,9 @@ const index = () => {
       <Images/> */}
       <Card/>
       <Name/>
+      {/* <Dynamic/> */}
+      {/* <CarComponent/> */}
+      <External/>
     </View>
     
   )
