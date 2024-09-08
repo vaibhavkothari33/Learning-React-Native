@@ -322,4 +322,46 @@ export default External
 ```
 <img src="./images/comparsion.png" alt="Screenshot of the app" title="First page" width="600"/>
 
+### 4. TailWind css
+Install Dependencies
+```bash
+npm install tailwindcss-react-native
+npm install --save-dev @types/tailwindcss-react-native
+
+```
+Configure Tailwind
+```bash
+npx tailwindcss init
+```
+Then change this accroding to your structure
+
+```js
+module.exports = {
+  content: [
+    './App.{js,jsx,ts,tsx}',
+    './src/**/*.{js,jsx,ts,tsx}',  // Adjust based on your folder structure
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+Then start using tailwind
+```tsx
+import React from 'react';
+import { View, Text } from 'react-native';
+import { tailwind } from 'tailwindcss-react-native';
+
+const TailwindExample = () => {
+  return (
+    <View style={tailwind('flex-1 justify-center items-center bg-blue-100')}>
+      <Text style={tailwind('text-xl text-blue-600')}>Hello, Tailwind!</Text>
+    </View>
+  );
+};
+
+export default TailwindExample;
+```
+
 ![Screenshot of the app](./images/profile.png "First page")
