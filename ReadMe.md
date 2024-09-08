@@ -364,4 +364,62 @@ const TailwindExample = () => {
 export default TailwindExample;
 ```
 
+# Rendering data from list or object using ListData
+```tsx
+import { View, Text, FlatList } from "react-native";
+import React from "react";
+
+const ListData = () => {
+  const fruits = ["Apple", "Banana", "Orange","Grapes","Watermelon"];
+  return (
+    <View>
+      <FlatList
+        data={fruits}
+        keyExtractor={(item) =>item} // to get the unique keys
+        renderItem={({ item }) => {
+            return <Text style={{textAlign:"center"}}>{item}</Text>
+        }}
+      />
+    </View>
+  );
+};
+
+export default ListData;
+```
+
+### Objects
+
+```tsx
+import { View, Text, FlatList } from "react-native";
+import React from "react";
+
+const ListData2 = () => {
+    const city = [
+      {
+        id: 1,
+        location: "London",
+      },
+      {
+        id: 2,
+        location: "Jaipur",
+      },
+      {
+        id: 3,
+        location: "Delhi",
+      }
+];
+    return (
+      <View>
+        <FlatList
+          keyExtractor={(item) => item.id.toString()}
+          data={city}
+          renderItem={({ item }) => {
+          return <Text>{item.location}</Text>}}
+        />
+      </View>
+    );
+  };
+
+export default ListData2;
+```
 ![Screenshot of the app](./images/profile.png "First page")
