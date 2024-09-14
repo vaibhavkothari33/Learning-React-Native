@@ -13,6 +13,8 @@ import CarComponent from '../components/CarComponent'
 import External from '../components/External'
 import ListData from '../components/ListData'
 import ListData2 from '../components/ListData2'
+import Flatlistone from '../components/Flatlist'
+
 
 const index = () => {
   return (
@@ -31,7 +33,8 @@ const index = () => {
       {/* <CarComponent/> */}
       <External/>
       {/* <ListData/> */}
-      <ListData2/>
+      {/* <ListData2/> */}
+      <Flatlistone/>
     </View>
     
   )

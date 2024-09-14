@@ -422,4 +422,37 @@ const ListData2 = () => {
 
 export default ListData2;
 ```
+
+### rendering huge item through render function and flatlist
+render function
+rember to return the view or change the brackets {} to ()
+```tsx
+
+interface Product{
+  image:string;
+  name:string;
+  rating:number;
+  price:number;
+}
+  const renderItem = ({ item } : {item : Product}) => {
+    return (
+      <View>
+        <Image source={{ uri: item.image }} />
+        <Text>Name: {item.name}</Text>
+        <Text>Rating: {item.rating}</Text>
+        <Text>Price: {item.price}</Text>
+      </View>
+    );
+  };
+
+```
+```tsx
+  <View>
+      <FlatList data = {products}
+        keyExtractor={(item,index) => index.toString()}
+        renderItem={renderItem}
+        />
+    </View>
+```
+
 ![Screenshot of the app](./images/profile.png "First page")
