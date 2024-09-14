@@ -507,4 +507,46 @@ const style = StyleSheet.create({
 ```
 <img src="./images/sc04.jpeg" alt="Screenshot of the app" title="First page" width="250"/> &nbsp;<img src="./images/sc05.jpeg" alt="Screenshot of the app" title="First page" width="250"/>
 
+### Props component
+add the data in parent component and render in child component
+```tsx
+import { View, Text, Image } from "react-native";
+import React from "react";
+import ChildComponent from "./ChildComponent";
+
+const ParentComponent = () => {
+  return (
+    <View>
+      <Text style={{ textAlign: "center" }}>ParentComponent</Text>
+      <ChildComponent name="vaibhav" age={19} color="Green" />
+    </View>
+  );
+};
+
+export default ParentComponent;
+
+```
+Parent Component
+```tsx
+import { View, Text } from 'react-native'
+import React from 'react'
+interface ChildProp{
+    name:string;
+    age:number;
+    color:string;
+}
+const ChildComponent = ({name,age,color}:ChildProp) => {
+    // console.log(props);
+    
+  return (
+    <View> 
+      <Text style={{ textAlign: "center" ,padding:10 }}>{name}</Text>
+      <Text style={{ textAlign: "center" }}>{age}</Text>
+      <Text style={{ textAlign: "center" }}>{color}</Text>
+    </View>
+  )
+}
+
+export default ChildComponent
+```
 ![Screenshot of the app](./images/profile.png "First page")

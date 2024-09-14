@@ -14,6 +14,7 @@ import External from '../components/External'
 import ListData from '../components/ListData'
 import ListData2 from '../components/ListData2'
 import Flatlistone from '../components/Flatlist'
+import ParentComponent from '../components/ParentComponent'
 
 
 const index = () => {
@@ -34,7 +35,8 @@ const index = () => {
       {/* <External/> */}
       {/* <ListData/> */}
       {/* <ListData2/> */}
-      <Flatlistone/>
+      <ParentComponent/>
+      {/* <Flatlistone/> */}
     </View>
     
   )
