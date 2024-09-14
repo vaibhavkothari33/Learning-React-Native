@@ -504,6 +504,7 @@ const style = StyleSheet.create({
     marginTop: 5,
   },
 });
-
 ```
+<img src="./images/sc04.jpeg" alt="Screenshot of the app" title="First page" width="250"/> &nbsp;<img src="./images/sc05.jpeg" alt="Screenshot of the app" title="First page" width="250"/>
+
 ![Screenshot of the app](./images/profile.png "First page")
