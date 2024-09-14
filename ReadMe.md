@@ -454,5 +454,56 @@ interface Product{
         />
     </View>
 ```
+styling for the above code
+```tsx
+ const renderItem = ({ item } : {item : Product}) => {
+    return (
+      <View style={style.productContainer}>
+        <Image source={{ uri: item.image }} style={style.image} />
+        <Text style={style.name} >Name: {item.name}</Text>
+        <Text style={style.rating}>Rating: {item.rating}</Text>
+        <Text style={style.price}>Price: {item.price}</Text>
+      </View>
+    );
+  };
+```
 
+```tsx
+const style = StyleSheet.create({
+  productContainer:{
+    flex:1,
+    alignItems: "center",
+    padding: 10,
+    marginBottom: 10,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  image: {
+    width: 200,
+    height: 300,
+    borderRadius: 10,
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginTop: 10,
+  },
+  rating: {
+    fontSize: 16,
+    color: "#888",
+    marginTop: 5,
+  },
+  price: {
+    fontSize: 16,
+    color: "#000",
+    marginTop: 5,
+  },
+});
+
+```
 ![Screenshot of the app](./images/profile.png "First page")

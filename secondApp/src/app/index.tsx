@@ -31,7 +31,7 @@ const index = () => {
       {/* <Name/> */}
       {/* <Dynamic/> */}
       {/* <CarComponent/> */}
-      <External/>
+      {/* <External/> */}
       {/* <ListData/> */}
       {/* <ListData2/> */}
       <Flatlistone/>
