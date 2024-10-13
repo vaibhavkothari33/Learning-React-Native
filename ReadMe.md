@@ -549,4 +549,60 @@ const ChildComponent = ({name,age,color}:ChildProp) => {
 
 export default ChildComponent
 ```
+
+### operators in typescript
+## if else
+```tsx
+const Password = ({ isValid }) => {
+  if (isValid) {
+    return <ValidPassword />;
+  }
+
+  return <InvalidPassword />;
+};
+const Conditional = () => {
+  return (
+    <View>
+      <Password isValid={true} />
+      <Password isValid={false} />
+    </View>
+  );
+};
+
+```
+
+## and operator
+```tsx
+const arr = ["milk", "eggs", "coffee", "tea", "bread"];
+
+const Andoperator = () => {
+  return (
+    <View>
+        <Text style={{textAlign:"center"}}>Cart 🛒</Text>
+
+        {arr.length >0 && (
+            <Text style={{textAlign:"center"}}>You have {arr.length} items in your cart</Text>
+        )}
+      <FlatList data={arr} renderItem={({ item }) => <Text style={{textAlign:"center"}}>{item}</Text>} />
+    </View>
+  );
+};
+```
+
+## ternary operator
+```tsx
+const Password = ({ isValid }) => {
+
+    return isValid ? <ValidPassword/>:<InvalidPassword/>;
+};
+const Ternary = () => {
+  return (
+    <View>
+      <Password isValid={true} />
+      <Password isValid={false} />
+    </View>
+  );
+};
+
+```
 ![Screenshot of the app](./images/profile.png "First page")
