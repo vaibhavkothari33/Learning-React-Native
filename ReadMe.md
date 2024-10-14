@@ -605,4 +605,56 @@ const Ternary = () => {
 };
 
 ```
+
+### useState in React natve
+## toggle button
+```tsx
+import { View, Text, Button } from 'react-native'
+import React, { useState } from 'react'
+// make a toogle button which shows on and off
+
+const Tooglebutton = () => {
+    const [isOn,setIson] = useState(false);
+    return (
+    <View>
+        <Text style={{textAlign:"center"}}>{isOn ? "On" : "Off"}</Text>
+        <Button title='Toggle' onPress={()=> setIson(!isOn)}/>
+    </View>
+  )
+}
+
+export default Tooglebutton
+```
+
+
+## Background changer
+
+```tsx
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import React, { useState } from "react";
+
+const colors = ["red", "blue", "green", "yellow", "pink"];
+
+const ColorPicker = () => {
+  const [selectColor, setSelectColor] = useState("white");
+
+  return (
+    <View style={{ backgroundColor: selectColor }}>
+      <Text style={styles.title}>Select a Color</Text>
+
+      <View style={styles.colorContainer}>
+        {colors.map((color) => (
+          <TouchableOpacity
+            key={color}
+            style={[styles.colorBox, { backgroundColor: color }]}
+            onPress={() => setSelectColor(color)}
+          />
+        ))}
+      </View>
+    
+    </View>
+  );
+};
+```
+
 ![Screenshot of the app](./images/profile.png "First page")
