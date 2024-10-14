@@ -9,6 +9,9 @@ import SharingState from '../components/04SharingState/SharingState'
 import Tooglebutton from '../components/Tooglebutton'
 import Weather from '../components/Weather'
 import ColorPicker from '../components/ColorPicker'
+import Todolist from '../components/Todolist'
+
+
 
 const Index = () => {
   return (
@@ -21,8 +24,9 @@ const Index = () => {
       {/* <UpdateObject/> */}
       {/* <SharingState/> */}
       {/* <Tooglebutton/> */}
-      <ColorPicker/>
+      {/* <ColorPicker/> */}
       {/* <Weather/> */}
+      <Todolist/>
     </View>
   )
 }

@@ -1,22 +1,17 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react'
 
-const ValidPassword = () => <Text>Valid password</Text>;
-const InvalidPassword = () => <Text>Invalid password</Text>;
-
-const Password = ({ isValid }) => {
-  if (isValid) {
-    return <ValidPassword />;
-  }
-
-  return <InvalidPassword />;
-};
+const color = ["red","blue","green"]
 const dumy = () => {
+  const [selectColor,setSelectColor] = useState("white");
+
   return (
     <View>
-      <Password isValid={false}/>
+      {color.map((colors)=>
+      <TouchableOpacity key={colors}/>
+      )}
     </View>
-  );
-};
+  )
+}
 
-export default dumy;
+export default dumy
